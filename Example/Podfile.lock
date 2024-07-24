@@ -3,7 +3,11 @@ PODS:
     - ReachabilitySwift
   - forceUpdate/ForceUpdate (0.1.0):
     - AppsOnAirIOSCore
+    - iOSDropDown
+    - Toast-Swift
+  - iOSDropDown (0.4.0)
   - ReachabilitySwift (5.2.3)
+  - Toast-Swift (5.1.1)
 
 DEPENDENCIES:
   - AppsOnAirIOSCore (from `https://github.com/harshil-gandhi-us/AppsOnAirIOSCore`)
@@ -11,7 +15,9 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - iOSDropDown
     - ReachabilitySwift
+    - Toast-Swift
 
 EXTERNAL SOURCES:
   AppsOnAirIOSCore:
@@ -26,9 +32,11 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   AppsOnAirIOSCore: de93a0068e27ef5af1becba3914fcd98700ce2dd
-  forceUpdate: e746079ac954279934f6b052a5284f7bf417dcce
+  forceUpdate: 77fb5742eb57e1e1d2291f7949a8564b2523b091
+  iOSDropDown: ce9daa584eaa5567cafc1b633e3cc7eb6d9cea42
   ReachabilitySwift: 7f151ff156cea1481a8411701195ac6a984f4979
+  Toast-Swift: 7a03a532afe3a560d4044bc7c237e2864d295173
 
-PODFILE CHECKSUM: 74a74adc65700bd9a081a5ba76f35ff67e377601
+PODFILE CHECKSUM: 3d92dffdf3c37995213ce33f6eea18f173f5f687
 
 COCOAPODS: 1.15.2

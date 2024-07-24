@@ -33,6 +33,8 @@ TODO: Add long description of the pod here.
   # s.source_files = 'forceUpdate/Classes/**/*'
 
   s.dependency 'AppsOnAirIOSCore'
+  s.dependency 'iOSDropDown'
+  s.dependency 'Toast-Swift'
 
   s.subspec 'ForceUpdate' do |forceUpdate|   # ForceUpdate is sub Pod Name & forceUpdate is alieas nane of sub pod 
       forceUpdate.source_files = 'Sources/ForceUpdate/Classes/**/*' # for access provide all the class inside ForceUpdate

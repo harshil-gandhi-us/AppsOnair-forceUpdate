@@ -21,6 +21,12 @@
   "dependencies": {
     "AppsOnAirIOSCore": [
 
+    ],
+    "iOSDropDown": [
+
+    ],
+    "Toast-Swift": [
+
     ]
   },
   "subspecs": [
