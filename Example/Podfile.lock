@@ -12,6 +12,7 @@ PODS:
 DEPENDENCIES:
   - AppsOnAirIOSCore (from `https://github.com/harshil-gandhi-us/AppsOnAirIOSCore`)
   - forceUpdate/ForceUpdate (from `../`)
+  - Toast-Swift
 
 SPEC REPOS:
   trunk:
@@ -37,6 +38,6 @@ SPEC CHECKSUMS:
   ReachabilitySwift: 7f151ff156cea1481a8411701195ac6a984f4979
   Toast-Swift: 7a03a532afe3a560d4044bc7c237e2864d295173
 
-PODFILE CHECKSUM: 3d92dffdf3c37995213ce33f6eea18f173f5f687
+PODFILE CHECKSUM: 64d69a1c20c0510b368b0d335e3c98f8cf9f4fcb
 
 COCOAPODS: 1.15.2
