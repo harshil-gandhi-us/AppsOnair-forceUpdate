@@ -21,16 +21,27 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/164989979/forceUpdate'
+  s.homepage         = 'https://github.com/harshil-gandhi-us/forceUpdate'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { '164989979' => 'harshil.gandhi@logicwind.com' }
-  s.source           = { :git => 'https://github.com/164989979/forceUpdate.git', :tag => s.version.to_s }
+  s.author           = { 'harshil-gandhi-us' => 'harshil.gandhi@logicwind.com' }
+  s.source           = { :git => 'https://github.com/harshil-gandhi-us/forceUpdate.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '12.0'
 
-  s.source_files = 'forceUpdate/Classes/**/*'
+  # s.source_files = 'forceUpdate/Classes/**/*'
+
+  s.dependency 'AppsOnAirIOSCore'
+
+  s.subspec 'ForceUpdate' do |forceUpdate|   # ForceUpdate is sub Pod Name & forceUpdate is alieas nane of sub pod 
+      forceUpdate.source_files = 'Sources/ForceUpdate/Classes/**/*' # for access provide all the class inside ForceUpdate
+      forceUpdate.resources = ['Sources/ForceUpdate/Assets/AppUpdate.storyboard'] # for access SwiftUI  inside ForceUpdate
+  end
+    
+  s.subspec 'DeepLink' do |deepLink|    # DeepLink is second sub Pod Name & deepLink is second alieas nane of sub pod 
+        deepLink.source_files = 'Sources/DeepLink/**/*'  # for access provide all the class inside second sub pod
+  end
   
   # s.resource_bundles = {
   #   'forceUpdate' => ['forceUpdate/Assets/*.png']
