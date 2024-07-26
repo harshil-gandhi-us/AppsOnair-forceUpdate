@@ -13,7 +13,7 @@
  public class AppsOnAirServices : NSObject {
      private var appId: String = ""
      private var window: UIWindow?
-     let appUpdateManager = AppsOnAirCoreServices.shared
+     let appUpdateManager = AppsOnAirCoreServices()
      
      public func checkForAppUpdate(_ completion : @escaping (NSDictionary) -> (),_ showNativeUI: Bool = false) {
          self.appId = appUpdateManager.getAppId();
