@@ -21,12 +21,6 @@
   "dependencies": {
     "AppsOnAirIOSCore": [
 
-    ],
-    "iOSDropDown": [
-
-    ],
-    "Toast-Swift": [
-
     ]
   },
   "subspecs": [
@@ -36,10 +30,6 @@
       "resources": [
         "Sources/ForceUpdate/Assets/AppUpdate.storyboard"
       ]
-    },
-    {
-      "name": "DeepLink",
-      "source_files": "Sources/DeepLink/**/*"
     }
   ]
 }

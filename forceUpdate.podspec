@@ -33,17 +33,12 @@ TODO: Add long description of the pod here.
   # s.source_files = 'forceUpdate/Classes/**/*'
 
   s.dependency 'AppsOnAirIOSCore'
-  s.dependency 'iOSDropDown'
-  s.dependency 'Toast-Swift'
-
+  
   s.subspec 'ForceUpdate' do |forceUpdate|   # ForceUpdate is sub Pod Name & forceUpdate is alieas nane of sub pod 
       forceUpdate.source_files = 'Sources/ForceUpdate/Classes/**/*' # for access provide all the class inside ForceUpdate
       forceUpdate.resources = ['Sources/ForceUpdate/Assets/AppUpdate.storyboard'] # for access SwiftUI  inside ForceUpdate
   end
-    
-  s.subspec 'DeepLink' do |deepLink|    # DeepLink is second sub Pod Name & deepLink is second alieas nane of sub pod 
-        deepLink.source_files = 'Sources/DeepLink/**/*'  # for access provide all the class inside second sub pod
-  end
+  
   
   # s.resource_bundles = {
   #   'forceUpdate' => ['forceUpdate/Assets/*.png']

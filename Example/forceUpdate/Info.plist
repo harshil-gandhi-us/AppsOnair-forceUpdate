@@ -22,8 +22,8 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
-    <key>appId</key>
-    <string>f4b12b26-f2dd-4d47-b2cf-fe3fc930e875</string>
+	<key>appId</key>
+	<string>f4b12b26-f2dd-4d47-b2cf-fe3fc930e875</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>

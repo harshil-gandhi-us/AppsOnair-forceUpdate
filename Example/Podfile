@@ -4,8 +4,6 @@ platform :ios, '12.0'
 
 target 'forceUpdate_Example' do
   pod 'forceUpdate/ForceUpdate', :path => '../'
-  
-  pod 'Toast-Swift'
 
   pod 'AppsOnAirIOSCore', :git => 'https://github.com/harshil-gandhi-us/AppsOnAirIOSCore'
 
