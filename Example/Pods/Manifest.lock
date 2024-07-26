@@ -6,7 +6,7 @@ PODS:
   - ReachabilitySwift (5.2.3)
 
 DEPENDENCIES:
-  - AppsOnAirIOSCore (from `https://github.com/harshil-gandhi-us/AppsOnAirIOSCore`)
+  - AppsOnAirIOSCore (from `https://github.com/harshil-gandhi-us/AppsOnAirIOSCore`, branch `dev`)
   - forceUpdate/ForceUpdate (from `../`)
 
 SPEC REPOS:
@@ -15,13 +15,14 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   AppsOnAirIOSCore:
+    :branch: dev
     :git: https://github.com/harshil-gandhi-us/AppsOnAirIOSCore
   forceUpdate:
     :path: "../"
 
 CHECKOUT OPTIONS:
   AppsOnAirIOSCore:
-    :commit: 7b0815576032dd34686b0a3945c7215c1d998454
+    :commit: 6acf6c2b6861a91d7164bd0187c143f033e24179
     :git: https://github.com/harshil-gandhi-us/AppsOnAirIOSCore
 
 SPEC CHECKSUMS:
@@ -29,6 +30,6 @@ SPEC CHECKSUMS:
   forceUpdate: db42b919e15c833d878c161d0ac9d965330b7f3a
   ReachabilitySwift: 7f151ff156cea1481a8411701195ac6a984f4979
 
-PODFILE CHECKSUM: 6db73370b8c50b2d3bcd9f2adb88d61db83e72c3
+PODFILE CHECKSUM: e21f89969d1395cddad7d7fe7017453354611dbf
 
 COCOAPODS: 1.15.2
