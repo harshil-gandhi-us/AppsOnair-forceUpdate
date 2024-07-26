@@ -19,7 +19,7 @@
          self.appId = appUpdateManager.getAppId();
          print("appID \(self.appId)")
          if self.appId != "" {
-             appUpdateManager.networkStatusListnerHandler { isConnected in
+             appUpdateManager.networkStatusListenerHandler { isConnected in
                  if(showNativeUI) {
                      AppUpdateRequest.fetchAppUpdate(self.appId) { (appUpdateInfo) in
                          if (appUpdateInfo.count > 0 || appUpdateInfo["error"] != nil) {
