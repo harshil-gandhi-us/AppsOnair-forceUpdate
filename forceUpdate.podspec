@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/harshil-gandhi-us/forceUpdate'
+  s.homepage         = 'https://github.com/harshil-gandhi-us/AppsOnair-forceUpdate'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'harshil-gandhi-us' => 'harshil.gandhi@logicwind.com' }
-  s.source           = { :git => 'https://github.com/harshil-gandhi-us/forceUpdate.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/harshil-gandhi-us/AppsOnair-forceUpdate.git', :branch => 'dev' }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '12.0'
