@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "summary": "A short description of forceUpdate.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/harshil-gandhi-us/forceUpdate",
+  "homepage": "https://github.com/harshil-gandhi-us/AppsOnair-forceUpdate",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,8 +12,8 @@
     "harshil-gandhi-us": "harshil.gandhi@logicwind.com"
   },
   "source": {
-    "git": "https://github.com/harshil-gandhi-us/forceUpdate.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/harshil-gandhi-us/AppsOnair-forceUpdate.git",
+    "branch": "dev"
   },
   "platforms": {
     "ios": "12.0"

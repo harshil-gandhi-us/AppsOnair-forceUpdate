@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "AppsOnAirIOSCore.h"
 
 FOUNDATION_EXPORT double AppsOnAirIOSCoreVersionNumber;
 FOUNDATION_EXPORT const unsigned char AppsOnAirIOSCoreVersionString[];

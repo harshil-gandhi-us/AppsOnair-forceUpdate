@@ -13,9 +13,11 @@ class ViewController: UIViewController {
     let forceUpdateController = AppsOnAirServices()
     override func viewDidLoad() {
         super.viewDidLoad()
+        forceUpdateController.initialize()
+        forceUpdateController.showNativeAlert(showNativeUI: true)
         forceUpdateController.checkForAppUpdate({ value in
             print("ss")
-        }, true)
+        })
         
         // Do any additional setup after loading the view, typically from a nib.
     }

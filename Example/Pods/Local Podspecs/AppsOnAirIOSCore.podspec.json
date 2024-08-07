@@ -1,9 +1,9 @@
 {
   "name": "AppsOnAirIOSCore",
   "version": "0.1.0",
-  "summary": "A short description of AppsOnAirIOSCore.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/harshil-gandhi-16/AppsOnAirIOSCore",
+  "summary": "AppsOnAirIOSCore is for AppsOnAir",
+  "description": "AppsOnAirIOSCore is used for network related and appId",
+  "homepage": "https://github.com/harshil-gandhi-us/AppsOnAirIOSCore",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,16 +12,20 @@
     "harshil-gandhi-16": "harshil.gandhi@logicwind.com"
   },
   "source": {
-    "git": "https://github.com/harshil-gandhi-16/AppsOnAirIOSCore.git",
-    "branch": "main"
+    "git": "https://github.com/harshil-gandhi-us/AppsOnAirIOSCore.git",
+    "tag": "0.1.0"
   },
+  "swift_versions": "5.0",
   "platforms": {
     "ios": "12.0"
   },
-  "source_files": "AppsOnAirIOSCore/Classes/**/*",
+  "source_files": "AppsOnAirIOSCore/Classes/**/*.{swift,h,m}",
+  "public_header_files": "AppsOnAirIOSCore/Classes/**/*.h",
+  "private_header_files": "AppsOnAirIOSCore/Classes/AppsOnAirIOSCore-Bridging-Header.h",
   "dependencies": {
     "ReachabilitySwift": [
 
     ]
-  }
+  },
+  "swift_version": "5.0"
 }

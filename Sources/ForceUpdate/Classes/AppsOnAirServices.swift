@@ -14,31 +14,48 @@ public class AppsOnAirServices : NSObject {
     private var appId: String = ""
     private var window: UIWindow?
     private var isNetworkConnected: Bool? = nil
+    private var isCheckFetchUpdate:Bool = false
+    private var showNativeUI:Bool = false
     let appUpdateManager = AppsOnAirCoreServices()
     
-    public func initialize(){
+    @objc public func initialize(){
         self.appId = appUpdateManager.getAppId();
         appUpdateManager.initialize()
     }
+
+    @objc public func showNativeAlert(showNativeUI: Bool){
+        self.showNativeUI = showNativeUI
+        if (self.showNativeUI && !(self.isCheckFetchUpdate)) {
+            AppUpdateRequest.fetchAppUpdate(self.appId) { (appUpdateInfo) in
+                if (appUpdateInfo.count > 0 || appUpdateInfo["error"] != nil) {
+                    self.presentAppUpdate(appUpdateInfo: appUpdateInfo)
+                }
+            }
+            self.isCheckFetchUpdate = true
+        }
+    }
     
-    public func checkForAppUpdate(_ completion : @escaping (NSDictionary) -> (),_ showNativeUI: Bool = false) {
+    @objc public func checkForAppUpdate(_ completion : @escaping (NSDictionary) -> ()) {
         if self.appId != "" {
             appUpdateManager.networkStatusListenerHandler { isConnected in
-                if(showNativeUI) {
-                    AppUpdateRequest.fetchAppUpdate(self.appId) { (appUpdateInfo) in
-                        if (appUpdateInfo.count > 0 || appUpdateInfo["error"] != nil) {
-                            self.presentAppUpdate(appUpdateInfo: appUpdateInfo)
+                if(self.showNativeUI) {
+                        if (isConnected && !(self.isCheckFetchUpdate)) {
+                            AppUpdateRequest.fetchAppUpdate(self.appId) { (appUpdateInfo) in
+                                if (appUpdateInfo.count > 0 || appUpdateInfo["error"] != nil) {
+                                    self.presentAppUpdate(appUpdateInfo: appUpdateInfo)
+                                }
+                            }
+                            self.isCheckFetchUpdate = true
+                        }
+                    } else {
+                        AppUpdateRequest.fetchAppUpdate(self.appId) { (appUpdateData) in
+                            completion(appUpdateData)
                         }
                     }
-                } else {
-                    AppUpdateRequest.fetchAppUpdate(self.appId) { (appUpdateData) in
-                        completion(appUpdateData)
-                    }
-                }
-               
             }
         }   
     }
+    
     func presentAppUpdate(appUpdateInfo: NSDictionary) {
         if (appUpdateInfo.count > 0) {
             DispatchQueue.main.sync {

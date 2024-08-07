@@ -5,14 +5,18 @@ import AVFoundation
 //
 public class AppsOnAirCoreServices : NSObject, NetworkServiceDelegate {
     
-    public static let shared = AppsOnAirCoreServices()
     private var appId: String = ""
-    public var isNetworkConnected: Bool = false
+    public var isNetworkConnected: Bool? = nil
     private var window: UIWindow?
     private var errorMessage:String = "AppsOnAir Appid is Not initialized for more details: \n https://documentation.appsonair.com"
     var networkService: NetworkService = ReachabilityNetworkService()
-
-    public func getAppId()->  String{
+    
+    public func initialize(){
+            networkService.delegate = self
+            networkService.startMonitoring()
+    }
+    
+    public func getAppId()-> String{
       // To fetch appId once id set then again not read from Info plist . 
       /*   if self.appId != "" {
             return self.appId
@@ -26,20 +30,22 @@ public class AppsOnAirCoreServices : NSObject, NetworkServiceDelegate {
             exit(-1)
             #else
             print(MyError.runtimeError(errorMessage))
+            return ""
             #endif
-        }
-        else {
+        }else{
             return self.appId
         }
     }
    
     public func isConnectedNetwork()-> Bool{
-        return isNetworkConnected
+        return (isNetworkConnected ?? false)
     }
     
     func networkStatusDidChange(status: Bool) {
-        isNetworkConnected = status
-        networkStatusChangeHandler?(status)
+        if(isNetworkConnected != status){
+            networkStatusChangeHandler?(status)
+            isNetworkConnected = status
+        }
     }
     // Closure type for network status change handler
     public typealias NetworkStatusChangeHandler = (Bool) -> Void
@@ -47,8 +53,6 @@ public class AppsOnAirCoreServices : NSObject, NetworkServiceDelegate {
       
       // Method to set the network status change handler
     public func networkStatusListenerHandler(_ handler: @escaping NetworkStatusChangeHandler) {
-        networkService.delegate = self
-        networkService.startMonitoring()
         networkStatusChangeHandler = handler
       }
     //Throw Error
